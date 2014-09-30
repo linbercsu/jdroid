@@ -17,7 +17,7 @@ import com.jdroid.eventbus.JEventBus;
 
 public class MyActivity extends ActionBarActivity {
 
-    static int testInt = 0;
+    static int testInt = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
