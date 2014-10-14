@@ -45,8 +45,12 @@ public class MyActivity extends ActionBarActivity {
         JEventBus.getDefault().unRegister(this);
     }
 
-    public void onJEvent(Integer v){
-        Log.e("test", "value="+v);
+    public void onJEvent(Integer v) {
+        Log.e("test", "value=" + v);
+    }
+
+    public void teset() {
+        int a = 1;
     }
 
     @Override
@@ -61,7 +65,7 @@ public class MyActivity extends ActionBarActivity {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+        int id = item.getItemId();//test test test3
 
         JEventBus.getDefault().post(testInt++);
         //noinspection SimplifiableIfStatement
@@ -82,7 +86,7 @@ public class MyActivity extends ActionBarActivity {
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                Bundle savedInstanceState) {
+                                 Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_my, container, false);
             return rootView;
         }
