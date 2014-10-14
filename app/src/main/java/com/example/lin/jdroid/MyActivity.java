@@ -45,8 +45,12 @@ public class MyActivity extends ActionBarActivity {
         JEventBus.getDefault().unRegister(this);
     }
 
-    public void onJEvent(Integer v){
-        Log.e("test", "value="+v);
+    public void onJEvent(Integer v) {
+        Log.e("test", "value=" + v);
+    }
+
+    public void teset() {
+        int a = 1;
     }
 
     @Override
@@ -82,7 +86,7 @@ public class MyActivity extends ActionBarActivity {
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                Bundle savedInstanceState) {
+                                 Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_my, container, false);
             return rootView;
         }
