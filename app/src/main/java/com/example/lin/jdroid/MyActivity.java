@@ -17,6 +17,15 @@ import com.jdroid.eventbus.JEventBus;
 
 public class MyActivity extends ActionBarActivity {
 
+    static {
+        try{
+
+            System.loadLibrary("example");
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
     static int testInt = 1;
 
     @Override
@@ -27,6 +36,12 @@ public class MyActivity extends ActionBarActivity {
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.container, new PlaceholderFragment())
                     .commit();
+        }
+
+        try{
+            Log.d("test", getStringFromJni());
+        }catch (Exception e){
+            e.printStackTrace();
         }
     }
 
@@ -75,6 +90,8 @@ public class MyActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    native public String getStringFromJni();
 
     /**
      * A placeholder fragment containing a simple view.
